@@ -48,3 +48,5 @@ Visual Perception Stack For Self-Driving Cars
 - The results should be bounding boxes that reliably contain obstacles. To perform this filtering, we will need to use the semantic segmentation output to count the number of pixels in the bounding box that have the same category as the classification output from the 2D object detector. 
 - The trick here, is that this number will depend on the size of the bounding box. We will need to normalize the pixel count by the area of the bounding box before attempting to filter out the detections with a threshold. The final normalized count is equivalent to computing the area inside the bounding box occupied by pixels belonging to the correct category. 
 
+## Final Notes:
+This is the final assignment project from Visual Perception for Self-Driving Cars course of Self-Driving Cars Specialization by University of Toronto.
