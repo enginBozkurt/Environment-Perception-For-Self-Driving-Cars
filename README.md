@@ -43,4 +43,8 @@ Visual Perception Stack For Self-Driving Cars
 
 ![7](https://user-images.githubusercontent.com/30608533/64910424-02a77e00-d71f-11e9-9dcb-1dccd23dc9ae.jpg)
 
+- The output of object detection is usually reliable. But for this assessment, we are given a high recall low precision detector that detects all objects in the scene, but also provides some false positives. 
+- We are required to use the output from semantic segmentation to eliminate these false positives before estimating the distance to the obstacles. 
+- The results should be bounding boxes that reliably contain obstacles. To perform this filtering, we will need to use the semantic segmentation output to count the number of pixels in the bounding box that have the same category as the classification output from the 2D object detector. 
+- The trick here, is that this number will depend on the size of the bounding box. We will need to normalize the pixel count by the area of the bounding box before attempting to filter out the detections with a threshold. The final normalized count is equivalent to computing the area inside the bounding box occupied by pixels belonging to the correct category. 
 
