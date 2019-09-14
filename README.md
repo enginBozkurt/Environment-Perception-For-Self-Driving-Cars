@@ -2,8 +2,22 @@
 Visual Perception Stack For Self-Driving Cars 
 
 
+## General overview and goals of the project
+
+- Using the output of semantic segmentation neural networks to implement drivable space estimation in 3D.
+- Using the output of semantic segmentation neural networks to implement lane estimation.
+- Using the output of semantic segmentation to filter errors in the output of 2D object detectors.
+- Using the filtered 2D object detection results to determine how far obstacles are from the self-driving car.
+
+# Some implementation details and tricks
+
 ![1](https://user-images.githubusercontent.com/30608533/64910373-4ea5f300-d71e-11e9-9715-88c9318a0221.jpg)
 
+
+- All the required 3D estimation will be performed in the camera coordinate frame
+- The camera as a sensor is usually oriented with its y-axis pointing downward.
+- The only thing you will need to be careful about, is the sign of the height value of pixels. 
+- Points higher than the camera will have a negative height, while points lower than the camera will have a positive height. 
 
 ![2](https://user-images.githubusercontent.com/30608533/64910374-52d21080-d71e-11e9-94ef-4419708de081.jpg)
 
