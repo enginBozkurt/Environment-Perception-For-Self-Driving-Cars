@@ -31,6 +31,9 @@ Visual Perception Stack For Self-Driving Cars
 
 ![4](https://user-images.githubusercontent.com/30608533/64910416-ec012700-d71e-11e9-837a-94d3c6b7c2a8.jpg)
 
+- A simple clustering algorithm would be to first choose a cluster center at random from the remaining filter lines, then add to the cluster any lines that have a similar slope or intercept to the cluster line. 
+- A line is considered close to the cluster center if the difference between its slope and slope of the cluster center is less than a specific slope threshold, and the distance between its intercept and the intercept of the cluster center is less than a specific intercept threshold as well. 
+- The slope difference threshold is usually chosen to be a maximum of 0.3, while the intercept difference threshold is defined in pixels, and is usually chosen between 20 and 50 pixels.
 
 ![5](https://user-images.githubusercontent.com/30608533/64910417-eefc1780-d71e-11e9-8b4f-81e4205276e9.jpg)
 
