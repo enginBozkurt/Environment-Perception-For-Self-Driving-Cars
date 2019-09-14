@@ -24,6 +24,9 @@ Visual Perception Stack For Self-Driving Cars
 
 ![3](https://user-images.githubusercontent.com/30608533/64910377-582f5b00-d71e-11e9-95eb-1ed8ed0d823c.jpg)
 
+- To filter out the horizontal lines, we can rely on the slope of the estimated lines. 
+- Horizontal lines and images tend to have a slope very close to zero. However, we also want to remove heavily slanted lines. 
+- As such, a threshold is introduced as a lower limit of allowed slopes for the output of this filtering step. The exact value of this threshold needs to be determined empirically, try values between 0.1 and 0.3 for best results.
 
 
 ![4](https://user-images.githubusercontent.com/30608533/64910416-ec012700-d71e-11e9-837a-94d3c6b7c2a8.jpg)
